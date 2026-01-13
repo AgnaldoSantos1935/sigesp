@@ -9,7 +9,7 @@
 @section('content')
     <div class="card">
         <div class="card-header">
-            <h3 class="card-title">Lista de Pessoas</h3>
+            <h3 class="card-title">Lista de Usuários</h3>
             <div class="card-tools">
                 <button type="button" class="btn btn-primary btn-sm" onclick="openPessoaCreateModal()">
                     <i class="fas fa-plus"></i> Cadastrar
@@ -22,8 +22,8 @@
                 <thead>
                     <tr>
                         <th>#</th>
-                        <th>Nome Completo</th>
-                        <th>CPF</th>
+                        <th>Nome</th>
+                        <th>Email</th>
                         <th>Ativo</th>
                         <th>Ações</th>
                     </tr>

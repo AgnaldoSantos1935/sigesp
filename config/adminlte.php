@@ -320,14 +320,83 @@ return [
 
         [
             'text' => 'Pessoas',
-            'route' => 'pessoas.index',
             'icon' => 'fas fa-users',
+            'submenu' => [
+                [
+                    'text' => 'Pessoas Físicas',
+                    'route' => 'pessoas.index',
+                    'icon' => 'fas fa-user',
+                ],
+                [
+                    'text' => 'Pessoas Jurídicas',
+                    'route' => 'pessoas_juridicas.index',
+                    'icon' => 'fas fa-building',
+                ],
+            ],
         ],
 
         [
             'text' => 'Unidades',
             'route' => 'unidades.index',
-            'icon' => 'fas fa-building',
+            'icon' => 'fas fa-school',
+        ],
+
+        ['header' => 'CONTRATOS E LICITAÇÕES'],
+
+        [
+            'text' => 'Licitações',
+            'route' => 'licitacoes.index',
+            'icon' => 'fas fa-gavel',
+        ],
+        [
+            'text' => 'Contratos',
+            'route' => 'contratos.index',
+            'icon' => 'fas fa-file-contract',
+        ],
+        [
+            'text' => 'Convênios',
+            'route' => 'convenios.index',
+            'icon' => 'fas fa-handshake',
+        ],
+
+        [
+            'text' => 'Termos Aditivos',
+            'route' => 'termos_aditivos.index',
+            'icon' => 'fas fa-file-signature',
+        ],
+        [
+            'text' => 'Apostilamentos',
+            'route' => 'apostilamentos.index',
+            'icon' => 'fas fa-file-invoice',
+        ],
+        [
+            'text' => 'Designações',
+            'route' => 'designacoes.index',
+            'icon' => 'fas fa-user-tie',
+        ],
+
+        ['header' => 'FINANCEIRO', 'can' => 'module-financeiro'],
+        [
+            'text' => 'Empenhos',
+            'route' => 'empenhos.index',
+            'icon' => 'fas fa-money-check-alt',
+            'can' => 'module-financeiro',
+        ],
+
+        ['header' => 'NOTAS TÉCNICAS', 'can' => 'module-nt'],
+        [
+            'text' => 'Avarias',
+            'route' => 'avarias.index',
+            'icon' => 'fas fa-tools',
+            'can' => 'module-nt',
+        ],
+
+        ['header' => 'FÁBRICA DE SOFTWARE', 'can' => 'module-fabrica_software'],
+        [
+            'text' => 'Demandas',
+            'route' => 'demandas.index',
+            'icon' => 'fas fa-code-branch',
+            'can' => 'module-fabrica_software',
         ],
 
         ['header' => 'ADMINISTRAÇÃO'],
@@ -362,8 +431,8 @@ return [
     ],
     'footer' => [
         'enabled' => true,
-        'left' => 'Fiscalizer © ' . date('Y'),
-        'right' => 'SEDUC-PA',
+        'left' => 'Sigesp© ' . date('Y'),
+        'right' => 'X-north',
     ],
     /*
     |--------------------------------------------------------------------------

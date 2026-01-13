@@ -18,11 +18,16 @@ Schema::create('vinculos', function (Blueprint $table) {
         ->constrained('pessoas_fisicas')
         ->cascadeOnDelete();
 
-    $table->string('cargo');
-    $table->string('tipo_vinculo');
+    $table->string('nomenclatura')->nullable();
+    $table->string('formacao_exigida')->nullable();
+    $table->string('cargo')->nullable();
+    $table->string('tipo_vinculo')->nullable();
     $table->string('regime_trabalhista')->nullable();
+    
+    $table->string('lotacao')->nullable();
+    $table->string('matricula_funcional')->nullable();
 
-    $table->date('ingresso');
+    $table->date('ingresso')->nullable();
     $table->date('encerramento')->nullable();
 
     $table->timestamps();

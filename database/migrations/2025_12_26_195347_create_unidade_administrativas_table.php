@@ -18,8 +18,13 @@ Schema::create('unidades_administrativas', function (Blueprint $table) {
         ->nullable()
         ->constrained('regionais');
 
+    $table->foreignId('endereco_id')->nullable()->constrained('enderecos')->nullOnDelete();
+    $table->foreignId('contato_id')->nullable()->constrained('contatos')->nullOnDelete();
+    $table->foreignId('chefia_id')->nullable()->constrained('chefias_adm')->nullOnDelete();
+
     $table->string('nome');
     $table->string('tipo');
+    $table->string('atividade')->nullable();
 
     $table->timestamps();
 });

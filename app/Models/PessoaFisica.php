@@ -11,7 +11,7 @@ class PessoaFisica extends Model
 
     protected $table = 'pessoas_fisicas'; // 👈 AJUSTE PARA O NOME REAL
     protected $fillable = [
-        'user_id','nome_completo','cpf','rg','data_nascimento','genero','ativo'
+        'user_id','endereco_id','nome_completo','cpf','rg','data_nascimento','genero','tipo_sanguineo','ativo'
     ];
 
     public function user()
@@ -31,4 +31,3 @@ class PessoaFisica extends Model
         return $this->hasMany(Designacao::class);
     }
 }
-
